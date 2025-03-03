@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>clock</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="loader"></div>
+        
+        <details class="custom-select">
+            <summary class="selected">analog<span>▼</span></summary>
+            <div class="options">
+                <span onclick="analogShow()">analog</span>
+                <span onclick="digitalShow()">digital</span>
+            </div>
+        </details>
+        
+        <button class="menuBtn"></button>
+
+        <button id="modeButton">
+            <img id="themeIcon" src="/dark-mode.png">
+        Theme</button>
+        
+        <div class="digital-clock">
+            <span id="hh">00</span>
+            <span>:</span>
+            <span id="mm">00</span>
+            <span>:</span>
+            <span id="ss">00</span>
+            <span id="amPm">am</span>
+        </div>
+        
+        <div class="analog-clock">
+            <div class="number-lines" style="--t:12; --i:1"><b>|</b></div>
+            <div class="number-lines" style="--t:3; --i:2"><b>|</b></div>
+            <div class="number-lines" style="--t:6; --i:3"><b>|</b></div>
+            <div class="number-lines" style="--t:9; --i:4"><b>|</b></div>
+            
+            <div class="hand hours-hand"></div>
+            <div class="hand minutes-hand"></div>
+            <div class="hand seconds-hand"></div>
+            <div class="dot center-dot"></div>
+            
+            <div class="hanging-items">
+                <div class="hang-one hanging"></div>
+                <div class="hang-two hanging"></div>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
